@@ -1,0 +1,7 @@
+<div class="modal-header bg-yellow-300">
+    <h4 class="modal-title" id="modal-basic-title">Update todo</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+    <app-add-edit-todo-form [formValues]="todo" (editAnnouncer)="handleSubmit($event)"></app-add-edit-todo-form>
+</div>

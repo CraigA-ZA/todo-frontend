@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import 'bootstrap/scss/_variables.scss';
+
+.form-label {
+    margin-bottom: 0;
+}
+
+
+.bg-yellow-300 {
+    background-color: $yellow-300;
+}
+
+
+.bg-yellow-200 {
+    background-color: $yellow-200;
+}
+
+.bg-grey-100 {
+    background-color: $gray-100;
+}

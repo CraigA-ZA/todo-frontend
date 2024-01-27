@@ -1,0 +1,8 @@
+<div class="d-flex align-items-center">
+    <div class="position-absolute pe-none start-0 end-0">
+        {{(todoService.todos | async)!.length}} {{ (todoService.todos | async)!.length === 1 ? 'TODO' : 'TODOs' }}
+    </div>
+    <div class="ms-auto">
+        <button type="button" class="btn btn-success" (click)="clearCompleted()">Clear completed</button>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<ul class="list-group list-group-flush">
+    <li class="list-group-item d-flex align-items-center justify-content-between"
+        [class.text-decoration-line-through]="todo.completed" [ngClass]="i % 2 === 0 ? 'bg-yellow-200' : 'bg-grey-100'" *ngFor="let todo of (todoService.todos | async);index as i">
+        <input type="checkbox" [(ngModel)]="todo.completed" (change)="persistToggle(i)">
+        <div class="d-flex flex-column text-break text-wrap px-5">
+            <span class="fw-bold fs-4">{{todo.title}}</span>
+            <span class="text-muted fs-6">{{todo.description}}</span>
+        </div>
+
+        <div class="d-flex">
+            <button (click)="deleteTodo(i)" class='btn btn-outline-danger'>
+                <i class="bi bi-trash3"></i>
+            </button>
+
+            <button (click)="editTodo(i)" [disabled]="todo.completed"
+                [ngClass]="todo.completed ? 'btn-outline-light' : 'btn-outline-primary'"
+                class='btn btn-outline-primary ms-3'>
+                <i class="bi bi-pencil"></i>
+            </button>
+        </div>
+    </li>
+</ul>
