@@ -1,11 +1,11 @@
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TodoService } from '../services/todo.service';
+import { TodoService } from '../../services/todo.service';
 
 @Component({
     selector: 'app-footer',
     standalone: true,
-    imports: [AsyncPipe],
+    imports: [AsyncPipe, CommonModule],
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.scss'
 })

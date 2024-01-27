@@ -1,6 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { AddTodoModel } from '../model/add-todo.model';
 import { Todo } from '../model/todo.model';
 import { TodoHttpService } from './todo-http.service';

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AddTodoModel } from '../../model/add-todo.model';
 import { Todo } from '../../model/todo.model';
@@ -12,9 +12,9 @@ import { TodoService } from '../../services/todo.service';
     templateUrl: './add-edit-todo-form.component.html',
     styleUrl: './add-edit-todo-form.component.scss'
 })
-export class AddEditTodoFormComponent {
+export class AddEditTodoFormComponent implements OnInit {
     @Input() formValues: Todo | null = null;
-    @Output() editAnnouncer: EventEmitter<AddTodoModel> = new EventEmitter();;
+    @Output() editAnnouncer: EventEmitter<AddTodoModel> = new EventEmitter();
 
     public addTodoForm = this.formBuilder.group({
         title: this.formBuilder.nonNullable.control('', [Validators.required]),

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AddEditTodoFormComponent } from './components/add-edit-todo-form/add-edit-todo-form.component';
 import { EditModalComponent } from './components/edit-modal/edit-modal.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
     selector: 'app-root',
