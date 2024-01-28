@@ -2,8 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddTodoModel } from '../../model/add-todo.model';
-import { TodoService } from '../../services/todo.service';
+import { AddTodoModel } from '../../../model/add-todo.model';
+import { TodoService } from '../../../services/todo.service';
 import { EditModalComponent } from '../edit-modal/edit-modal.component';
 
 @Component({

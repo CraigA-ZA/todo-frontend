@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AddTodoModel } from '../../model/add-todo.model';
-import { Todo } from '../../model/todo.model';
-import { TodoService } from '../../services/todo.service';
+import { AddTodoModel } from '../../../model/add-todo.model';
+import { Todo } from '../../../model/todo.model';
+import { TodoService } from '../../../services/todo.service';
 
 @Component({
     selector: 'app-add-edit-todo-form',

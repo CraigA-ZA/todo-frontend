@@ -1,0 +1,10 @@
+<div class="d-flex align-items-center">
+    <div class="position-absolute pe-none start-0 end-0" *ngIf="activeTodos | async as todos">
+        {{todos.length}} {{ todos.length === 1 ? 'TODO' : 'TODOs' }}
+    </div>
+    <div class="ms-auto">
+        <button type="button" class="btn btn-success" (click)="archiveCompleted()">
+            <i class="bi bi-archive"></i>
+            Archive completed</button>
+    </div>
+</div>

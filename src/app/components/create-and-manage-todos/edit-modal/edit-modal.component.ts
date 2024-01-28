@@ -1,8 +1,8 @@
 import { Component, inject, Input } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddTodoModel } from '../../model/add-todo.model';
-import { Todo } from '../../model/todo.model';
+import { AddTodoModel } from '../../../model/add-todo.model';
+import { Todo } from '../../../model/todo.model';
 import { AddEditTodoFormComponent } from '../add-edit-todo-form/add-edit-todo-form.component';
 
 @Component({
