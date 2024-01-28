@@ -28,10 +28,7 @@ export class TodoHttpService {
         return this.http.put<void>(`${this.baseUrl}/todos/toggle/${id}`, state);
     }
 
-    public persistDeleteAllByIds(ids: number[]): Observable<void> {
-        const params = {
-            ids
-        }
-        return this.http.delete<void>(`${this.baseUrl}/todos/delete`, {params});
+    public persistArchiveAllByIds(ids: number[]): Observable<void> {
+        return this.http.post<void>(`${this.baseUrl}/todos/archive`, ids);
     }
 }

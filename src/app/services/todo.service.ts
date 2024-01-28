@@ -49,13 +49,18 @@ export class TodoService {
     }
 
     public toggleTodo(index: number) {
+        this._todos.next(this._todos.value);
         const todo = this.getTodo(index);
         this.todoHttp.persistToggleTodo(todo.id, todo.completed).subscribe();
     }
 
-    public clearCompleted(): void {
-        const idsToDelete = this._todos.value.filter(todo => todo.completed).map(todo => todo.id);
-        this._todos.next(this._todos.value.filter(todo => !todo.completed));
-        this.todoHttp.persistDeleteAllByIds(idsToDelete).subscribe();
+    public archiveCompleted(): void {
+        const todos = [...this._todos.value]
+        todos.forEach(todo => todo.archived = todo.completed);
+        const idsToArchive = this._todos.value.filter(todo => todo.completed).map(todo => todo.id);
+
+        this._todos.next(todos);
+
+        this.todoHttp.persistArchiveAllByIds(idsToArchive).subscribe();
     }
 }
