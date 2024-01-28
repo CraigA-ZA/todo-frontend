@@ -1,6 +1,6 @@
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { filter, map, Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Todo } from '../../../model/todo.model';
 import { TodoService } from '../../../services/todo.service';
 
